@@ -1850,6 +1850,17 @@ div.text h3 {
 	font-weight: 100;
 }
 
+.gallery-box {
+	width: 100%;
+}
+
+.gallery-item::before {
+	content: '';
+	display: ;
+	display: block;
+	padding-top: 70%;
+}
+
 .repair-about h2 {
 	font-size: 1.5625em;
 	color: #0ebfdd;
