@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+	<link rel="icon" href="img/elka.png" type="image/x-icon" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name='yandex-verification' content='49c29efb0f6d76b4' />
+	<!--[if IE]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<meta charset="utf-8" />
+	<meta name="Description" content="Контакты" />
+	<meta name="Keywords" content="Контакты" />
+	<title>Контакты</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<!--<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>-->
+	<script src="js/carousel/jquery.carouFredSel-6.2.1.js" type="text/javascript"></script>
+
+	<script type="text/javascript" language="javascript" src="js/carousel/helper-plugins/jquery.mousewheel.min.js">
+	</script>
+	<script type="text/javascript" language="javascript" src="js/carousel/helper-plugins/jquery.touchSwipe.min.js">
+	</script>
+	<script type="text/javascript" language="javascript" src="js/carousel/helper-plugins/jquery.transit.min.js">
+	</script>
+	<script type="text/javascript" language="javascript"
+		src="js/carousel/helper-plugins/jquery.ba-throttle-debounce.min.js"></script>
+
+	<link media="screen" type="text/css" href="js/nivo/nivo-slider.css" rel="stylesheet">
+	<link media="screen" type="text/css" href="js/nivo/themes/default/default.css" rel="stylesheet">
+	<link rel="Stylesheet" type="text/css" href="css/main.css" />
+
+
+
+</head>
+
+<body>
+	<div class="header page">
+		<div class="head">
+			<div class="site-box">
+				<div class="logo-car"></div>
+				<div class="logo-bg">
+
+				</div>
+				<a href="index.html" title="Усадьба Лесной Двор" class="logo">
+					<img src="img/logo.png" title="Усадьба Лесной Двор" alt="Усадьба Лесной Двор">
+				</a>
+				<div class="social-block">
+					<p class="phone">+375 (29) 2-425-425 </p>
+					<a href="kontakty.html#ancmap">Могилевская область, 3км от города в направлении Шклова </a>
+
+				</div>
+			</div>
+		</div>
+		<div class="slider page">
+			<div class="slider-wrapper theme-default">
+				<img src="data/slider/b323aa0f836b71400602a1882b0088c9.jpg" alt="" title="слайд 3"><img
+					src="data/slider/db88a949c62797b9b9d7d58ad57a7af6.jpg" alt="" title="слайд 1"><img
+					src="data/slider/d04485c2b692b084776582e5df8697ef.jpg" alt="" title="слайд 2"><img
+					src="data/slider/7e1f96dd73b14f4398d0dbcd116932d2.jpg" alt="" title="слайд 4"> </div>
+			<div class="clearfix"></div>
+			<div id="timer1" class="timer"></div>
+			<div class="menu">
+				<div class="site-box">
+					<ul>
+						<li class="item   first-item">
+							<a href="index.html" title="Главная">
+								<span>Главная</span>
+							</a>
+						</li>
+						<li class="item   ">
+							<a href="fotogalereya.html" title="Фотогалерея">
+								<span>Фотогалерея</span>
+							</a>
+						</li>
+						<li class="item   ">
+							<a href="otzyvy.html" title="Отзывы">
+								<span>Отзывы</span>
+							</a>
+						</li>
+						<li class="item   ">
+							<a href="novosti.html" title="Наши мероприятия">
+								<span>Наши мероприятия</span>
+							</a>
+						</li>
+						<li class="item  active ">
+							<a href="kontakty.html" title="Контакты">
+								<span>Контакты</span>
+							</a>
+						</li>
+					</ul>
+					<div class="burger">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+			</div>
+			<div class="fence"></div>
+		</div>
+
+
+	</div>
+
+	<script src="http://api-maps.yandex.ru/2.0/?lang=ru-RU&load=package.standard,package.geoObjects,package.controls">
+	</script>
+	<script type="text/javascript">
+		ymaps.ready(init);
+		var myMap,
+			myPlacemark,
+			s;
+
+
+		function init() {
+
+			myMap = new ymaps.Map("map", {
+				center: [53.984568, 30.313601],
+				zoom: 15,
+
+				type: "yandex#publicMapHybrid",
+				behaviors: ["default", "scrollZoom"],
+			}, {
+				maxAnimationZoomDifference: 0,
+				minZoom: 13,
+				maxZoom: 17,
+			});
+			myMap.controls.add('zoomControl', {
+				left: '35px'
+			});
+			myMap.controls.add('typeSelector');
+
+
+			myPlacemark = new ymaps.Placemark([53.984568, 30.313601], {
+
+				iconContent: "<p class='map-name' style='margin:60px 0 0 -62px; display:none;'>Усадьба<br> \"Лесной Двор\"</p>"
+			}, {
+				iconImageHref: '/img/map2.png',
+				iconImageSize: [82, 110],
+				iconImageOffset: [-80, -98],
+			});
+			myMap.geoObjects.add(myPlacemark);
+		}
+	</script>
+
+	<div class="site-box">
+		<!-- Breadcrumb -->
+		<div class="breadcrumb bordercolor">
+			<div class="breadcrumb_inner">
+				<a href="index.html" title="Вернуться на главную">Главная</a>
+				<span class="navigation-pipe">&gt;</span>
+				<span class="navigation_page">Контакты</span>
+			</div>
+		</div>
+		<!-- /Breadcrumb -->
+	</div>
+
+	<div class="pager site-box">
+		<h2 class="">Контакты</h2>
+		<div class="clr"></div>
+
+	</div>
+	<div class="contacts">
+		<div class="site-box">
+			<div class="text">
+				<p>
+					<p><strong>Наш телефон:</strong><br> &nbsp;&nbsp;&nbsp;+375(29)2-425-425 МТС&nbsp; <br></p>
+					<p><strong>Координаты для навигатора:</strong></p>
+					<p>&nbsp;&nbsp;&nbsp; 53.984568,30.313601</p>
+					<p>&nbsp; &nbsp; N53°59.014, E30°18.780<br></p>
+					<p><strong>Могилев, Могилевская область, 3км от города в направлении Шклова</strong></p>
+				</p>
+				<p class="" style="text-align:center">
+					<a title="" class="ancmap" href="kontakty.html#ancmap">Как проехать?</a>
+				</p>
+			</div>
+		</div>
+		<div class="form-contacts cont" id="ancform">
+			<div class="site">
+				<div class="message-form">
+					<form action="kontakty.html" class="" method="POST" class="feetback">
+						<h1>связаться с нами</h1>
+						<p class="type" data="mail">Задать вопрос, вы можете,
+							воспользовавшись формой обратной связи ниже.</p>
+						<p class="warning">Все поля обязательны для заполнения!</p>
+						<div class="box">
+							<input class="clr" name="name" placeholder="Ваше имя" type="text" value="">
+						</div>
+						<div class="box">
+							<input class="clr" name="email" placeholder="E-mail" type="text" value="">
+						</div>
+						<div class="box">
+							<textarea name="text" class="clr" placeholder="Текст сообщения" rows="7"></textarea>
+						</div>
+						<div class="contacts-phone clr">
+							<p>+375 (29) 2-425-425 </p>
+						</div>
+						<!--<div class="order_phone">Заказать звонок</div>-->
+						<div class="message-form-button">
+							<button>Связаться</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="map" id="ancmap">
+
+		<div id="map" data="1"></div>
+
+	</div>
+	<div class="clr"></div>
+	<footer>
+		<div class="site-box">
+			<div class="bottom-menu">
+				<ul>
+					<li class="   first-item">
+						<a href="index.html" title="Главная">
+							<span>Главная</span>
+						</a>
+						<span class="menu-line">|</span>
+					</li>
+					<li class="   ">
+						<a href="fotogalereya.html" title="Фотогалерея">
+							<span>Фотогалерея</span>
+						</a>
+						<span class="menu-line">|</span>
+					</li>
+					<li class="   ">
+						<a href="otzyvy.html" title="Отзывы">
+							<span>Отзывы</span>
+						</a>
+						<span class="menu-line">|</span>
+					</li>
+					<li class="   ">
+						<a href="novosti.html" title="Наши мероприятия">
+							<span>Наши мероприятия</span>
+						</a>
+						<span class="menu-line">|</span>
+					</li>
+					<li class="  active ">
+						<a href="kontakty.html" title="Контакты">
+							<span>Контакты</span>
+						</a>
+						<span class="menu-line">|</span>
+					</li>
+					<li><a href="index.html@payment.html" title="Оплата">
+							<span>Оплата</span>
+						</a><span class="menu-line">|</span></li>
+				</ul>
+				<p>Все права защищены &copy;<a alt="Усадьба Лесной Двор | Усадьбы в Могилеве" title="Лесной Двор"
+						href="kontakty.html">Лесной Двор</a> 2012-2022</p>
+				<p><img style="height: 25px;" src="images/payment/all_payment_logo_transparent.png"><a
+						href="https://artpay.by" target="_blank"><img style="height: 25px;"
+							src="images/payment/artpay_transparent.png"></a>
+				</p>
+			</div>
+			<div class="developer">
+				<a href="http://promicom.by" class="promicom" target="_blank"
+					title="Digital агентство Промиком. Разработка продающих сайтов">Digital агентство Промиком.
+					Разработка и продвижение продающих сайтов</a>
+			</div>
+
+		</div>
+	</footer>
+	<script src="js/script.js"></script>
+</body>
+
+</html>
+
+
+<script>
+
+</script>
+</body>
+
+</html>
